@@ -1,0 +1,3 @@
+/home/moaz/projects/falling-sand-c/build/CMakeFiles/falling-sand.dir
+/home/moaz/projects/falling-sand-c/build/CMakeFiles/edit_cache.dir
+/home/moaz/projects/falling-sand-c/build/CMakeFiles/rebuild_cache.dir
