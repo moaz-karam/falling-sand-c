@@ -381,10 +381,8 @@ CMakeFiles/falling-sand.dir/src/particle_handler.c.o: /home/moaz/projects/fallin
   /usr/local/include/SDL3/SDL_oldnames.h \
   /home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.h \
   /home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.h \
-  /home/moaz/projects/falling-sand-c/include/water.h \
   /home/moaz/projects/falling-sand-c/include/sand.h \
-  /home/moaz/projects/falling-sand-c/include/particle_handler.h \
-  /home/moaz/projects/falling-sand-c/include/wood.h
+  /home/moaz/projects/falling-sand-c/include/particle_handler.h
 
 CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src/sand.c \
   /usr/include/stdc-predef.h \
@@ -512,8 +510,16 @@ CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
 
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
@@ -530,8 +536,6 @@ CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src
 /home/moaz/projects/falling-sand-c/src/particle_handler.c:
 
 /usr/local/include/SDL3/SDL_main_impl.h:
-
-/home/moaz/projects/falling-sand-c/include/water.h:
 
 /usr/local/include/SDL3/SDL_main.h:
 
@@ -617,6 +621,8 @@ CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
+/usr/include/time.h:
+
 /usr/local/include/SDL3/SDL_scancode.h:
 
 /usr/include/string.h:
@@ -640,6 +646,8 @@ CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src
 /usr/local/include/SDL3/SDL_init.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -778,8 +786,6 @@ CMakeFiles/falling-sand.dir/src/sand.c.o: /home/moaz/projects/falling-sand-c/src
 /usr/local/include/SDL3/SDL_keycode.h:
 
 /usr/local/include/SDL3/SDL_filesystem.h:
-
-/home/moaz/projects/falling-sand-c/include/wood.h:
 
 /usr/include/features.h:
 
