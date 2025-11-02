@@ -110,7 +110,6 @@ CMakeFiles/falling-sand.dir/src/particle_handler.c.o: \
  /usr/local/include/SDL3/SDL_timer.h /usr/local/include/SDL3/SDL_tray.h \
  /usr/local/include/SDL3/SDL_version.h \
  /usr/local/include/SDL3/SDL_oldnames.h \
- /home/moaz/projects/falling-sand-c/src/../include/./data_structures/dll/dll.h \
- /home/moaz/projects/falling-sand-c/src/../include/./data_structures/array_list/array_list.h \
- /home/moaz/projects/falling-sand-c/src/../include/sand.h \
- /home/moaz/projects/falling-sand-c/src/../include/./particle_handler.h
+ /home/moaz/projects/falling-sand-c/src/../include/./sand.h \
+ /home/moaz/projects/falling-sand-c/src/../include/././particle_handler.h \
+ /home/moaz/projects/falling-sand-c/src/../include/./sand_handler.h

@@ -1,14 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o"
-  "CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o.d"
-  "CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o"
-  "CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o.d"
   "CMakeFiles/falling-sand.dir/src/main.c.o"
   "CMakeFiles/falling-sand.dir/src/main.c.o.d"
   "CMakeFiles/falling-sand.dir/src/particle_handler.c.o"
   "CMakeFiles/falling-sand.dir/src/particle_handler.c.o.d"
   "CMakeFiles/falling-sand.dir/src/sand.c.o"
   "CMakeFiles/falling-sand.dir/src/sand.c.o.d"
+  "CMakeFiles/falling-sand.dir/src/sand_handler.c.o"
+  "CMakeFiles/falling-sand.dir/src/sand_handler.c.o.d"
   "falling-sand"
   "falling-sand.pdb"
 )

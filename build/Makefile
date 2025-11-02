@@ -130,54 +130,6 @@ falling-sand/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/build
 .PHONY : falling-sand/fast
 
-include/data_structures/array_list/array_list.o: include/data_structures/array_list/array_list.c.o
-.PHONY : include/data_structures/array_list/array_list.o
-
-# target to build an object file
-include/data_structures/array_list/array_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o
-.PHONY : include/data_structures/array_list/array_list.c.o
-
-include/data_structures/array_list/array_list.i: include/data_structures/array_list/array_list.c.i
-.PHONY : include/data_structures/array_list/array_list.i
-
-# target to preprocess a source file
-include/data_structures/array_list/array_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.i
-.PHONY : include/data_structures/array_list/array_list.c.i
-
-include/data_structures/array_list/array_list.s: include/data_structures/array_list/array_list.c.s
-.PHONY : include/data_structures/array_list/array_list.s
-
-# target to generate assembly for a file
-include/data_structures/array_list/array_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.s
-.PHONY : include/data_structures/array_list/array_list.c.s
-
-include/data_structures/dll/dll.o: include/data_structures/dll/dll.c.o
-.PHONY : include/data_structures/dll/dll.o
-
-# target to build an object file
-include/data_structures/dll/dll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o
-.PHONY : include/data_structures/dll/dll.c.o
-
-include/data_structures/dll/dll.i: include/data_structures/dll/dll.c.i
-.PHONY : include/data_structures/dll/dll.i
-
-# target to preprocess a source file
-include/data_structures/dll/dll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.i
-.PHONY : include/data_structures/dll/dll.c.i
-
-include/data_structures/dll/dll.s: include/data_structures/dll/dll.c.s
-.PHONY : include/data_structures/dll/dll.s
-
-# target to generate assembly for a file
-include/data_structures/dll/dll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.s
-.PHONY : include/data_structures/dll/dll.c.s
-
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -250,6 +202,30 @@ src/sand.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/src/sand.c.s
 .PHONY : src/sand.c.s
 
+src/sand_handler.o: src/sand_handler.c.o
+.PHONY : src/sand_handler.o
+
+# target to build an object file
+src/sand_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/src/sand_handler.c.o
+.PHONY : src/sand_handler.c.o
+
+src/sand_handler.i: src/sand_handler.c.i
+.PHONY : src/sand_handler.i
+
+# target to preprocess a source file
+src/sand_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/src/sand_handler.c.i
+.PHONY : src/sand_handler.c.i
+
+src/sand_handler.s: src/sand_handler.c.s
+.PHONY : src/sand_handler.s
+
+# target to generate assembly for a file
+src/sand_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/falling-sand.dir/build.make CMakeFiles/falling-sand.dir/src/sand_handler.c.s
+.PHONY : src/sand_handler.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -259,12 +235,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... falling-sand"
-	@echo "... include/data_structures/array_list/array_list.o"
-	@echo "... include/data_structures/array_list/array_list.i"
-	@echo "... include/data_structures/array_list/array_list.s"
-	@echo "... include/data_structures/dll/dll.o"
-	@echo "... include/data_structures/dll/dll.i"
-	@echo "... include/data_structures/dll/dll.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -274,6 +244,9 @@ help:
 	@echo "... src/sand.o"
 	@echo "... src/sand.i"
 	@echo "... src/sand.s"
+	@echo "... src/sand_handler.o"
+	@echo "... src/sand_handler.i"
+	@echo "... src/sand_handler.s"
 .PHONY : help
 
 

@@ -5,8 +5,6 @@ cmake_policy(SET CMP0009 NEW)
 # DATA_STRUCTURES at CMakeLists.txt:12 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/moaz/projects/falling-sand-c/include/data_structures/*.c")
 set(OLD_GLOB
-  "/home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.c"
-  "/home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -19,6 +17,7 @@ set(OLD_GLOB
   "/home/moaz/projects/falling-sand-c/src/main.c"
   "/home/moaz/projects/falling-sand-c/src/particle_handler.c"
   "/home/moaz/projects/falling-sand-c/src/sand.c"
+  "/home/moaz/projects/falling-sand-c/src/sand_handler.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

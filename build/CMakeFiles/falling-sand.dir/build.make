@@ -111,41 +111,26 @@ CMakeFiles/falling-sand.dir/src/sand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/falling-sand.dir/src/sand.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moaz/projects/falling-sand-c/src/sand.c -o CMakeFiles/falling-sand.dir/src/sand.c.s
 
-CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o: CMakeFiles/falling-sand.dir/flags.make
-CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o: /home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.c
-CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o: CMakeFiles/falling-sand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moaz/projects/falling-sand-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o -MF CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o.d -o CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o -c /home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.c
+CMakeFiles/falling-sand.dir/src/sand_handler.c.o: CMakeFiles/falling-sand.dir/flags.make
+CMakeFiles/falling-sand.dir/src/sand_handler.c.o: /home/moaz/projects/falling-sand-c/src/sand_handler.c
+CMakeFiles/falling-sand.dir/src/sand_handler.c.o: CMakeFiles/falling-sand.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moaz/projects/falling-sand-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/falling-sand.dir/src/sand_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/falling-sand.dir/src/sand_handler.c.o -MF CMakeFiles/falling-sand.dir/src/sand_handler.c.o.d -o CMakeFiles/falling-sand.dir/src/sand_handler.c.o -c /home/moaz/projects/falling-sand-c/src/sand_handler.c
 
-CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.c > CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.i
+CMakeFiles/falling-sand.dir/src/sand_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/falling-sand.dir/src/sand_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moaz/projects/falling-sand-c/src/sand_handler.c > CMakeFiles/falling-sand.dir/src/sand_handler.c.i
 
-CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moaz/projects/falling-sand-c/include/data_structures/array_list/array_list.c -o CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.s
-
-CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o: CMakeFiles/falling-sand.dir/flags.make
-CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o: /home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.c
-CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o: CMakeFiles/falling-sand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moaz/projects/falling-sand-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o -MF CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o.d -o CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o -c /home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.c
-
-CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.c > CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.i
-
-CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moaz/projects/falling-sand-c/include/data_structures/dll/dll.c -o CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.s
+CMakeFiles/falling-sand.dir/src/sand_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/falling-sand.dir/src/sand_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moaz/projects/falling-sand-c/src/sand_handler.c -o CMakeFiles/falling-sand.dir/src/sand_handler.c.s
 
 # Object files for target falling-sand
 falling__sand_OBJECTS = \
 "CMakeFiles/falling-sand.dir/src/main.c.o" \
 "CMakeFiles/falling-sand.dir/src/particle_handler.c.o" \
 "CMakeFiles/falling-sand.dir/src/sand.c.o" \
-"CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o" \
-"CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o"
+"CMakeFiles/falling-sand.dir/src/sand_handler.c.o"
 
 # External object files for target falling-sand
 falling__sand_EXTERNAL_OBJECTS =
@@ -153,12 +138,11 @@ falling__sand_EXTERNAL_OBJECTS =
 falling-sand: CMakeFiles/falling-sand.dir/src/main.c.o
 falling-sand: CMakeFiles/falling-sand.dir/src/particle_handler.c.o
 falling-sand: CMakeFiles/falling-sand.dir/src/sand.c.o
-falling-sand: CMakeFiles/falling-sand.dir/include/data_structures/array_list/array_list.c.o
-falling-sand: CMakeFiles/falling-sand.dir/include/data_structures/dll/dll.c.o
+falling-sand: CMakeFiles/falling-sand.dir/src/sand_handler.c.o
 falling-sand: CMakeFiles/falling-sand.dir/build.make
 falling-sand: /usr/local/lib/libSDL3.so.0.3.0
 falling-sand: CMakeFiles/falling-sand.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moaz/projects/falling-sand-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable falling-sand"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moaz/projects/falling-sand-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable falling-sand"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/falling-sand.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
