@@ -4,7 +4,7 @@
 
 #define sand_WATER_CAPACITY 1
 
-
+void sand_init();
 void sand_update(Particle* sandParticle);
 
 #endif

@@ -22,13 +22,13 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[]) {
         return SDL_APP_FAILURE;
     }
 
-    if (!SDL_CreateWindowAndRenderer("falling-sand", 400, 600, SDL_WINDOW_MAXIMIZED, &window, &renderer)) {
+    if (!SDL_CreateWindowAndRenderer("falling-sand", 1920, 1080, SDL_WINDOW_FULLSCREEN, &window, &renderer)) {
         SDL_Log("couldn't create window/renderer, %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-    SDL_SetRenderLogicalPresentation(renderer, 400, 600, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+    SDL_SetRenderLogicalPresentation(renderer, 1920, 1080, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     
-    ph_init(400, 600);
+    ph_init(1920, 1080);
 
     keyState = SDL_GetKeyboardState(NULL);
 
@@ -78,7 +78,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
     // rendering to the screen
     SDL_RenderPresent(renderer);
 
-    SDL_Delay(50);
+    // SDL_Delay(50);
 
     return SDL_APP_CONTINUE;
 }

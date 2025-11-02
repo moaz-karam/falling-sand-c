@@ -28,10 +28,12 @@ void ph_init(int w, int h) {
     height = h;
 
     inserting = 0;
-    insertionRadius = 10;
+    insertionRadius = 30;
     selectedType = SAND;
     mouseX = 0;
     mouseY = 0;
+
+    sand_init();
 }
 
 void ph_end() {
@@ -119,7 +121,7 @@ void ph_insertMany(int mx, int my) {
             }
 
             else if (selectedType == REMOVE) {
-
+                ph_removeParticle(x, y);
             }
             else if (ph_getParticle(x, y) == NULL) {
                 Particle* particle = ph_createParticle();
@@ -195,6 +197,18 @@ void ph_removeParticleHelper(Particle* particle) {
 // called to set a particle to be removed in the next ph_update call
 void ph_removeParticle(int x, int y) {
     grid[x + y * width] = NULL;
+}
+
+int ph_getType(int x, int y) {
+    Particle* temp = ph_getParticle(x, y);
+    if (temp == NULL) {
+        return -1;
+    }
+    return temp->type;
+}
+
+int ph_strongerThan(int t1, int t2) {
+    return t1 > t2;
 }
 
 

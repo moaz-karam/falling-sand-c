@@ -54,6 +54,10 @@ void ph_removeParticle(int x, int y);
 
 int ph_validPoint(int x, int y);
 
+int ph_getType(int x, int y);
+
+int ph_strongerThan(int t1, int t2);
+
 ArrayList* ph_getSandPoints();
 
 #include "sand.h"
