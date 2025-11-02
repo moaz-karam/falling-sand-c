@@ -72,7 +72,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 
     // drawing sand particles
     SDL_SetRenderDrawColor(renderer, COLORS[SAND][RED], COLORS[SAND][GREEN], COLORS[SAND][BLUE], SDL_ALPHA_OPAQUE);
-    SDL_RenderPoints(renderer, (SDL_FPoint*)(ph_getSandPoints()->data), ph_getSandPoints()->size);
+    SDL_RenderPoints(renderer, (sh_getPoints()), sh_getSandNumber());
 
 
     // rendering to the screen
@@ -84,5 +84,6 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 }
 
 void SDL_AppQuit(void* appstate, SDL_AppResult result) {
+    printf("Total Particles: %i\n", sh_getSandNumber());
     ph_end();
 }

@@ -91,8 +91,7 @@ SDL_FPoint sand_getPoint(int x, int y) {
 
 
 void sand_update(Particle* sandParticle) {
-    SDL_FPoint point;
-    ph_getPoint(SAND, sandParticle->sand.index, &point);
+    SDL_FPoint point = ph_getPoint(SAND, sandParticle->sand.index);
     point = sand_getPoint(point.x, point.y);
     ph_setParticle(sandParticle, point.x, point.y);
 }

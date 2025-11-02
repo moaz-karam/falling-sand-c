@@ -3,8 +3,6 @@
 
 #include <SDL3/SDL.h>
 
-#include "./data_structures/dll/dll.h"
-#include "./data_structures/array_list/array_list.h"
 
 #define  SAND     0
 #define  REMOVE   1
@@ -24,12 +22,12 @@ static int COLORS[][3] = {
 
 
 typedef struct {
-    unsigned int type;
+    Uint8 type;
     unsigned int index;
 } Sand;
 
 typedef union {
-    unsigned int type;
+    Uint8 type;
     Sand sand;
 } Particle;
 
@@ -48,7 +46,7 @@ Particle* ph_getParticle(int x, int y);
 
 void ph_setParticle(Particle* particle, float x, float y);
 
-void ph_getPoint(int type, unsigned int index, SDL_FPoint* point);
+SDL_FPoint ph_getPoint(int type, unsigned int index);
 
 void ph_removeParticle(int x, int y);
 
@@ -58,8 +56,8 @@ int ph_getType(int x, int y);
 
 int ph_strongerThan(int t1, int t2);
 
-ArrayList* ph_getSandPoints();
 
-#include "sand.h"
+#include "./sand.h"
+#include "./sand_handler.h"
 
 #endif
