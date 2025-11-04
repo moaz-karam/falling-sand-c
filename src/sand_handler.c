@@ -1,9 +1,10 @@
 #include <stdlib.h>
+#include <math.h>
 #include "../include/sand_handler.h"
 
 typedef struct {
 
-    SDL_FPoint* sandPoints;
+    SDL_FRect* sandRects;
     Particle** sandParticles;
 
     int size;
@@ -18,14 +19,14 @@ void sh_init() {
     sandHandler.size = 0;
     sandHandler.length = 4;
 
-    sandHandler.sandPoints = (SDL_FPoint*)malloc(sizeof(SDL_FPoint) * sandHandler.length);
+    sandHandler.sandRects = (SDL_FRect*)malloc(sizeof(SDL_FRect) * sandHandler.length);
     sandHandler.sandParticles = (Particle**)malloc(sizeof(Particle*) * sandHandler.length);
 
 }
 
 void sh_end() {
 
-    free(sandHandler.sandPoints);
+    free(sandHandler.sandRects);
     
     for (int i = 0; i < sandHandler.size; i += 1) {
         free(sandHandler.sandParticles[i]);
@@ -35,8 +36,11 @@ void sh_end() {
 
 }
 
-SDL_FPoint sh_getPoint(int index) {
-    return sandHandler.sandPoints[index];
+SDL_FRect sh_getRect(int index) {
+    SDL_FRect temp;
+    temp.x = (int)floor(sandHandler.sandRects[index].x / PARTICLE_DIMENSION);
+    temp.y = (int)floor(sandHandler.sandRects[index].y / PARTICLE_DIMENSION);
+    return temp;
 }
 
 Particle* sh_getParticle(int index) {
@@ -44,8 +48,8 @@ Particle* sh_getParticle(int index) {
 }
 
 void sh_setParticlePoint(Particle* sandParticle, int x, int y) {
-    sandHandler.sandPoints[sandParticle->sand.index].x = x;
-    sandHandler.sandPoints[sandParticle->sand.index].y = y;
+    sandHandler.sandRects[sandParticle->sand.index].x = x * PARTICLE_DIMENSION;
+    sandHandler.sandRects[sandParticle->sand.index].y = y * PARTICLE_DIMENSION;
 }
 
 int sh_getSandNumber() {
@@ -58,8 +62,8 @@ void sh_resizeUp() {
     sandHandler.sandParticles =
      (Particle**)realloc(sandHandler.sandParticles, sizeof(Particle*) * sandHandler.length);
     
-     sandHandler.sandPoints =
-      (SDL_FPoint*)realloc(sandHandler.sandPoints, sizeof(SDL_FPoint) * sandHandler.length);
+     sandHandler.sandRects =
+      (SDL_FRect*)realloc(sandHandler.sandRects, sizeof(SDL_FRect) * sandHandler.length);
 }
 
 void sh_pushSand(Particle* sandParticle, int x, int y) {
@@ -73,8 +77,14 @@ void sh_pushSand(Particle* sandParticle, int x, int y) {
 
     sandHandler.sandParticles[sandHandler.size] = sandParticle;
 
-    sandHandler.sandPoints[sandHandler.size].x = x;
-    sandHandler.sandPoints[sandHandler.size].y = y;
+    sandHandler.sandRects[sandHandler.size].x = x * PARTICLE_DIMENSION;
+    sandHandler.sandRects[sandHandler.size].y = y * PARTICLE_DIMENSION;
+
+
+    sandHandler.sandRects[sandHandler.size].w = PARTICLE_DIMENSION;
+    sandHandler.sandRects[sandHandler.size].h = PARTICLE_DIMENSION;
+
+    
 
     sandHandler.size += 1;
 }
@@ -86,13 +96,13 @@ void sh_removeSand(int index) {
     finalParticle->sand.index = index;
 
     sandHandler.sandParticles[index] = finalParticle;
-    sandHandler.sandPoints[index] = sandHandler.sandPoints[sandHandler.size - 1];
+    sandHandler.sandRects[index] = sandHandler.sandRects[sandHandler.size - 1];
 
     free(temp);
     sandHandler.size -= 1;
 }
 
-SDL_FPoint* sh_getPoints() {
-    return sandHandler.sandPoints;
+SDL_FRect* sh_getRects() {
+    return sandHandler.sandRects;
 }
 

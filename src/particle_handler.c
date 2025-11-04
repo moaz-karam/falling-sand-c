@@ -18,16 +18,25 @@ static int mouseY;
 
 
 void ph_init(int w, int h) {
-    grid = (Particle**) malloc(sizeof(Particle*) * w * h);
 
-    width = w;
-    height = h;
+    width = (int)(w / PARTICLE_DIMENSION);
+    height = (int)(h / PARTICLE_DIMENSION);
+
+    grid = (Particle**) malloc(sizeof(Particle*) * width * height);
+
 
     inserting = 0;
-    insertionRadius = 30;
+    insertionRadius = 50;
     selectedType = SAND;
     mouseX = 0;
     mouseY = 0;
+
+    // printf("width: %i\n", width);
+    // printf("height: %i\n", height);
+
+    for (int i = 0; i < width * height; i += 1) {
+        grid[i] = NULL;
+    }
 
     sh_init();
     sand_init();
@@ -73,9 +82,9 @@ Particle* ph_getParticle(int x, int y) {
     return grid[x + y * width];
 }
 
-SDL_FPoint ph_getPoint(int type, unsigned int index) {
+SDL_FRect ph_getRect(int type, unsigned int index) {
     if (type == SAND) {
-        return sh_getPoint(index);
+        return sh_getRect(index);
     }
 }
 
@@ -88,6 +97,10 @@ void ph_insertMany(int mx, int my) {
         for (float theta = 0; theta < 360; theta += 1) {
             int x = mx + r * cos(theta);
             int y = my + r * sin(theta);
+
+            x = (int)(x / PARTICLE_DIMENSION);
+            y = (int)(y / PARTICLE_DIMENSION);
+
 
             if (!ph_validPoint(x, y)) {
                 continue;
@@ -114,16 +127,16 @@ void ph_insert() {
 
 
 
-void ph_setParticle(Particle* particle, float x, float y) {
+void ph_setParticle(Particle* particle, int x, int y) {
     if (particle->type == SAND) {
-        SDL_FPoint tempPoint = sh_getPoint(particle->sand.index);
+        SDL_FRect tempPoint = sh_getRect(particle->sand.index);
 
         // remove particle from the old positions
         grid[(int)tempPoint.x + (int)tempPoint.y * width] = NULL;
 
 
         // set particle to the new positions
-        grid[(int)x + (int)y * width] = particle;
+        grid[x + y * width] = particle;
         sh_setParticlePoint(particle, x, y);
     }
 }
@@ -153,9 +166,9 @@ void ph_update() {
 
     for (int i = 0; i < sh_getSandNumber(); i += 1) {
         Particle* sandParticle = sh_getParticle(i);
-        SDL_FPoint sandPoint = sh_getPoint(i);
+        SDL_FRect sandRect = sh_getRect(i);
 
-        if (ph_getParticle(sandPoint.x, sandPoint.y) != sandParticle) {
+        if (ph_getParticle((int)sandRect.x, (int)sandRect.y) != sandParticle) {
             
             // replaces the final particle by the particle to be removed
             sh_removeSand(i);

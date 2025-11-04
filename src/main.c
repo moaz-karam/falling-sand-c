@@ -6,7 +6,7 @@
 #include "SDL3/SDL.h"
 #include <SDL3/SDL_main.h>
 
-#define SDL_HINT_SHUTDOWN_DBUS_ON_QUIT "SDL_SHUTDOWN_DBUS_ON_QUIT"
+// #define SDL_HINT_SHUTDOWN_DBUS_ON_QUIT "SDL_SHUTDOWN_DBUS_ON_QUIT"
 
 static SDL_Window* window = NULL;
 static SDL_Renderer* renderer = NULL;
@@ -22,13 +22,13 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[]) {
         return SDL_APP_FAILURE;
     }
 
-    if (!SDL_CreateWindowAndRenderer("falling-sand", 1920, 1080, SDL_WINDOW_FULLSCREEN, &window, &renderer)) {
+    if (!SDL_CreateWindowAndRenderer("falling-sand", 1000, 800, SDL_WINDOW_MAXIMIZED, &window, &renderer)) {
         SDL_Log("couldn't create window/renderer, %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-    SDL_SetRenderLogicalPresentation(renderer, 1920, 1080, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+    SDL_SetRenderLogicalPresentation(renderer, 1000, 800, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     
-    ph_init(1920, 1080);
+    ph_init(1000, 800);
 
     keyState = SDL_GetKeyboardState(NULL);
 
@@ -72,7 +72,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 
     // drawing sand particles
     SDL_SetRenderDrawColor(renderer, COLORS[SAND][RED], COLORS[SAND][GREEN], COLORS[SAND][BLUE], SDL_ALPHA_OPAQUE);
-    SDL_RenderPoints(renderer, (sh_getPoints()), sh_getSandNumber());
+    SDL_RenderRects(renderer, sh_getRects(), sh_getSandNumber());
 
 
     // rendering to the screen

@@ -12,12 +12,12 @@ int sand_getRandom(int min, int max) {
     return (rand() % (max - min) + 1) + min;
 }
 
-SDL_FPoint sand_getDiagonalPoint(int x, int y, int diff) {
-    SDL_FPoint rightPoint;
+SDL_FRect sand_getDiagonalPoint(int x, int y, int diff) {
+    SDL_FRect rightPoint;
     rightPoint.x = x;
     rightPoint.y = y;
 
-    SDL_FPoint leftPoint;
+    SDL_FRect leftPoint;
     leftPoint.x = x;
     leftPoint.y = y;
 
@@ -64,8 +64,8 @@ SDL_FPoint sand_getDiagonalPoint(int x, int y, int diff) {
 
 }
 
-SDL_FPoint sand_getPoint(int x, int y) {
-    SDL_FPoint point;
+SDL_FRect sand_getPoint(int x, int y) {
+    SDL_FRect point;
     point.x = x;
     point.y = y;
     for (int i = 1; i <= PARTICLE_SPEED; i += 1) {
@@ -91,7 +91,7 @@ SDL_FPoint sand_getPoint(int x, int y) {
 
 
 void sand_update(Particle* sandParticle) {
-    SDL_FPoint point = ph_getPoint(SAND, sandParticle->sand.index);
+    SDL_FRect point = ph_getRect(SAND, sandParticle->sand.index);
     point = sand_getPoint(point.x, point.y);
     ph_setParticle(sandParticle, point.x, point.y);
 }

@@ -7,7 +7,7 @@
 #define  SAND     0
 #define  REMOVE   1
 
-#define PARTICLE_SPEED 4
+#define PARTICLE_SPEED 6
 
 #define RED 0
 #define GREEN 1
@@ -15,6 +15,8 @@
 
 #define PARTICLES 0
 #define POINTS 1
+
+#define PARTICLE_DIMENSION 5
 
 static int COLORS[][3] = {
     {195, 178, 128} // sand
@@ -44,9 +46,9 @@ void ph_setMouse(int x, int y);
 
 Particle* ph_getParticle(int x, int y);
 
-void ph_setParticle(Particle* particle, float x, float y);
+void ph_setParticle(Particle* particle, int x, int y);
 
-SDL_FPoint ph_getPoint(int type, unsigned int index);
+SDL_FRect ph_getRect(int type, unsigned int index);
 
 void ph_removeParticle(int x, int y);
 
